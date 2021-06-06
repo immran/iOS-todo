@@ -55,7 +55,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ob-Jq-W9p">
                                 <rect key="frame" x="20" y="406" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDx-SZ-b8y">
                                 <rect key="frame" x="20" y="500" width="335" height="33"/>
@@ -65,6 +65,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsz-Wb-g05"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -92,6 +95,11 @@
                             <constraint firstItem="IHE-4j-QCJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xk4-se-uGt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="RTX-tN-MNt" id="8PZ-2V-n1J"/>
+                        <outlet property="loginButton" destination="qDx-SZ-b8y" id="7qW-qS-DF4"/>
+                        <outlet property="passwordTextField" destination="0ob-Jq-W9p" id="Lua-oY-ipc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
